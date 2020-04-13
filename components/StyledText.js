@@ -26,6 +26,7 @@ export function BoxValue(props) {
   );
 }
 
+
 const styles = StyleSheet.create({
   boxValue: {
     flex: 1,

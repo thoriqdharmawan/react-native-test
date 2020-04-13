@@ -52,12 +52,11 @@ export default function HomeScreen() {
               index="Meninggal"
             />
           </View>
-          <View style={styles.animation}>{/* <AnimationWashHand /> */}</View>
         </View>
       </ScrollView>
       <View style={styles.tabBarInfoContainer}>
         <Text style={styles.tabBarInfoText}>
-          terakhir update : {moment(data && data.lastUpdate).format("LL")}
+          Pembaruan terakhir : {moment(data && data.lastUpdate).format("LL")}
         </Text>
       </View>
     </View>
@@ -71,25 +70,25 @@ HomeScreen.navigationOptions = {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#f5f5f5",
   },
   titleWrapper: {
     marginHorizontal: 32,
   },
   title: {
-    fontSize: 29,
-    lineHeight: 40,
+    fontSize: 24,
+    lineHeight: 30,
     fontWeight: "600",
     color: "#000",
     fontFamily: "poppins-semibold",
   },
   subTitle: {
-    fontSize: 18,
+    fontSize: 14,
     color: "#C3C3C3",
-    marginTop: 10,
+    marginTop: 8,
   },
   case: {
-    width: "50%",
+    width: "auto",
   },
   contentWrapper: {
     display: "flex",
@@ -101,17 +100,13 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     flexWrap: "wrap",
   },
-  animation: {
-    width: "50%",
-    height: 200,
-  },
   contentContainer: {
     paddingTop: 30,
     paddingBottom: 30,
   },
   tabBarInfoContainer: {
     position: "absolute",
-    paddingVertical: 40,
+    paddingVertical: 10,
     bottom: 0,
     left: 0,
     right: 0,
@@ -131,7 +126,6 @@ const styles = StyleSheet.create({
     paddingVertical: 20,
   },
   tabBarInfoText: {
-    paddingVertical: 10,
     fontSize: 12,
     color: "#C3C3C3",
     textAlign: "center",

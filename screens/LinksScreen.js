@@ -1,16 +1,16 @@
 import { Ionicons } from "@expo/vector-icons";
 import * as WebBrowser from "expo-web-browser";
 import * as React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, SafeAreaView } from "react-native";
 import { RectButton, ScrollView } from "react-native-gesture-handler";
 
 export default function LinksScreen() {
   return (
-    <ScrollView
+    <SafeAreaView
       style={styles.container}
-      contentContainerStyle={styles.contentContainer}
+      // contentContainerStyle={styles.contentContainer}
     >
-      <OptionButton
+      {/* <OptionButton
         icon="md-school"
         label="Read the Expo documentation"
         onPress={() => WebBrowser.openBrowserAsync("https://docs.expo.io")}
@@ -45,8 +45,8 @@ export default function LinksScreen() {
           WebBrowser.openBrowserAsync("https://www.instagram.com/")
         }
         isLastOption
-      />
-    </ScrollView>
+      /> */}
+    </SafeAreaView>
   );
 }
 
@@ -70,8 +70,10 @@ function OptionButton({ icon, label, onPress, isLastOption }) {
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
     flex: 1,
-    backgroundColor: "#fafafa",
   },
   contentContainer: {
     paddingTop: 15,
